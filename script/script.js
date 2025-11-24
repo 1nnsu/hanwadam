@@ -83,7 +83,7 @@ const countWrap = () => {
 }
 
 const sec8_swiper = () => {
-    var swiper = new Swiper(".swiper", {
+    var swiper = new Swiper(".sec8_swiper", {
         spaceBetween: 1000,
         autoplay: {
             delay: 0, // important !!
