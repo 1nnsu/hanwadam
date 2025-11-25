@@ -1,16 +1,15 @@
 
-
 document.addEventListener("DOMContentLoaded", function(e){
-    sec1_Swiper();
-    sec4_Swiper1();
-    // sec4_Swiper2();
+    sec1_swiper();
+    sec2_swiper();
+    sec4_swiper1();
+    // sec4_swiper2();
     sec4_Menu();
     countWrap();
     sec8_swiper();
 })
 
-
-const sec1_Swiper = () => {
+const sec1_swiper = () => {
         var swiper = new Swiper(".sec1_swiper", {
         loop: true,
         effect: "fade",
@@ -22,25 +21,48 @@ const sec1_Swiper = () => {
         speed: 1000,  
     });
 }
+const sec2_swiper = () => {
+        var swiper = new Swiper(".sec2_swiper", {
+        loop: true,
+        slidesPerView: 2.5,
+        loopedSlides: 6,
+        centeredSlides: true,
+        spaceBetween: 20,
+        pagination: {
+        el: ".sec2-pagination",
+        },
+        breakpoints: {
+        1024: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 1.5,
+        },
+        480: {
+            slidesPerView: 1.1,
+        }
+    }
+    });
+}
 
-const sec4_Swiper1 = () => {
+const sec4_swiper1 = () => {
         var swiper = new Swiper(".sec4_Swiper1", {
         loop: true,
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".sec4_next",
+            prevEl: ".sec4_prev",
         },
         pagination: {
             el: ".swiper-pagination",
         },
     });
 }
-const sec4_Swiper2 = () => {
+const sec4_swiper2 = () => {
         var swiper = new Swiper(".sec4_Swiper2", {
         loop: true,
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".sec4_prev2",
+            prevEl: ".sec4_prev2",
         },
         pagination: {
             el: ".swiper-pagination",
@@ -84,16 +106,15 @@ const countWrap = () => {
 
 const sec8_swiper = () => {
     var swiper = new Swiper(".sec8_swiper", {
-        spaceBetween: 1000,
         autoplay: {
-            delay: 0, // important !!
+            delay: 1,               // 0 말고 최소 1로
             disableOnInteraction: false,
         },
-        speed: 10000,
+        speed: 10000,               // 30초 동안 한 바퀴
         loop: true,
         loopAdditionalSlides: 1,
-        slidesPerView: 1,
-        allowTouchMove: false
+        slidesPerView:8,
+        allowTouchMove: false,
     });
     
 }
