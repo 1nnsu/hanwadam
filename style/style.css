@@ -238,6 +238,11 @@ section.sec3 .arti_3 .bg { width: 100%; height: 100%; background: url('../img/ma
     section.sec3 article .t1 { font-size: 26px; }
     section.sec3 article .t2 { font-size: 16px; }
     section.sec3 article { height: 320px; } 
+
+    section.sec3 .arti_1 .bg {  background: url('../img/main/sec3/bg1_mo.jpg') no-repeat center / cover; background-attachment: fixed; position: absolute; }
+    section.sec3 .arti_2 .bg {  background: url('../img/main/sec3/bg2_mo.jpg') no-repeat center / cover; background-attachment: fixed; position: absolute; }
+    section.sec3 .arti_3 .bg {  background: url('../img/main/sec3/bg3_mo.jpg') no-repeat center / cover; background-attachment: fixed; position: absolute; }
+
 }
 
 @media screen and (max-width: 480px) { 
