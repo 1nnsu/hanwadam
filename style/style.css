@@ -409,10 +409,15 @@ section.sec5 ul li .item .t2 { font-size: 32px; color: #fff; font-weight: 400; }
 }
 
 /* sec6 */
-section.sec6 { padding: 100px 0; background: url('../img/main/sec6/bg.jpg') no-repeat center / cover; color: #fff; }
+section.sec6 { min-height: 100vh; padding: 100px 0; background: url('../img/main/sec6/bg.jpg') no-repeat center / cover; color: #fff; }
 section.sec6 .sec6_div {  }
 section.sec6 .sec6_div .t1 { font-size: 32px; color: #A8A7A6; text-align: center; margin-bottom: 10px;  }
 section.sec6 .sec6_div .t2 { font-size: 64px; text-align: center; font-weight: 400; }
+
+section.sec6 .imgAniBox { height: 700px; display: block; position: relative; margin: 0 auto; }
+section.sec6 .imgAniBox .sec6_img { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);  text-align: center;}
+section.sec6 .imgAniBox .shapImg { opacity: 0; }
+section.sec6 .imgAniBox .textImg {  }
 
 @media screen and (max-width: 1440px) { 
     section.sec6 .sec6_div .t1 { font-size: 24px; }

@@ -92,6 +92,32 @@ section.sec6 .sec6_div.on .t1 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards
 section.sec6 .sec6_div .t2 { opacity: 0; }
 section.sec6 .sec6_div.on .t2 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; animation-delay: 0.1s;}
 
+/* 오각형 */
+@keyframes fadeHex {
+    0%   { opacity: 0; }
+    20%  { opacity: 1; }
+    60%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+@keyframes opacity2 {
+    0%   { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+section.sec6 .imgAniBox .shapImg { animation: fadeHex 2s linear infinite; }
+section.sec6 .imgAniBox .textImg { animation: opacity2 5s linear infinite; }
+
+section.sec6 .imgAniBox .shapImg:nth-child(1) { animation-delay: .2s; }
+section.sec6 .imgAniBox .shapImg:nth-child(2) { animation-delay: .4s; }
+section.sec6 .imgAniBox .shapImg:nth-child(3) { animation-delay: .6s; }
+section.sec6 .imgAniBox .shapImg:nth-child(4) { animation-delay: .8s; }
+section.sec6 .imgAniBox .shapImg:nth-child(5) { animation-delay: 1s; }
+
+section.sec6 .imgAniBox .textImg1 {  }
+section.sec6 .imgAniBox .textImg2 { animation-delay: .3s; }
+section.sec6 .imgAniBox .textImg3 { animation-delay: .4s; }
+section.sec6 .imgAniBox .textImg4 { animation-delay: .5s; }
+section.sec6 .imgAniBox .textImg5 { animation-delay: .6s; }
+
 /* sec7 */
 section.sec7 .t1 { opacity: 0; }
 section.sec7.on .t1 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
