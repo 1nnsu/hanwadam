@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     privacyUsePopup();
     lenis_top();
     headerScrollMove();
-    // background_fixed();
+    background_fixed();
 
 })
 document.addEventListener("scroll", function(){

@@ -153,6 +153,11 @@ const sec8_swiper = () => {
         loopAdditionalSlides: 1,
         slidesPerView:8,
         allowTouchMove: false,
+        breakpoints: {
+        768: {
+            speed: 15000,
+        },
+    }
     });
     
 }
