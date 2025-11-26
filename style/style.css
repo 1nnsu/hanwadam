@@ -433,6 +433,8 @@ section.sec6 .imgAniBox .textImg {  }
     section.sec6 { padding: 13vw 0; }
     section.sec6 .sec6_div .t1 { font-size: 18px; }
     section.sec6 .sec6_div .t2 { font-size: 30px; }
+
+    section.sec6 .imgAniBox { height: 90vw; }
 }
 
 @media screen and (max-width: 480px) { 
