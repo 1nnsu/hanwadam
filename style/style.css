@@ -409,7 +409,7 @@ section.sec5 ul li .item .t2 { font-size: 32px; color: #fff; font-weight: 400; }
 }
 
 /* sec6 */
-section.sec6 { min-height: 100vh; padding: 100px 0; background: url('../img/main/sec6/bg.jpg') no-repeat center / cover; color: #fff; }
+section.sec6 { min-height: 100vh; padding: 100px 0; background: url('../img/main/sec6/bg.jpg') no-repeat center / cover; color: #fff; display: flex; align-items: center; justify-content: center; }
 section.sec6 .sec6_div {  }
 section.sec6 .sec6_div .t1 { font-size: 32px; color: #A8A7A6; text-align: center; margin-bottom: 10px;  }
 section.sec6 .sec6_div .t2 { font-size: 64px; text-align: center; font-weight: 400; }
