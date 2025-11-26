@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", function(e){
     headerScrollHandler();
     // bodyScroll();
     privacyUsePopup();
-    lenis_scroll();
+    lenis_top();
+    headerScrollMove();
     // background_fixed();
 
 })
@@ -16,6 +17,15 @@ document.addEventListener("scroll", function(){
 })
 
 
+
+const headerScrollMove = () => {
+    $(".scroll_move").click(function(e){  
+
+        e.preventDefault();       
+        
+        $('html,body').animate({scrollTop:$(this.hash).offset().top}, 10);
+    });
+}
 const background_fixed = () => {
     // 섹션 별 배경 고정
     const sections = document.querySelectorAll(".sec3 article .bg");
@@ -37,17 +47,19 @@ const background_fixed = () => {
 }
 
 
-const lenis_scroll = () => {
+const lenis_top = () => {
+    
     const lenis = new Lenis({
-    duration: 2.5,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(10, -10 * t)),
-    });
+            duration: 2.5,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(10, -10 * t)),
+            });
 
-    function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+
     $(".topBtn").on("click", function(e){
         e.preventDefault();
         lenis.scrollTo(0, {
@@ -114,7 +126,7 @@ const animationOnHandler = () => {
                 }
             });
         }, {
-            threshold: 0.5 // Adjust threshold as needed
+            threshold: 0.2 // Adjust threshold as needed
         });
         
         // Observe each .ani element

@@ -18,3 +18,108 @@
     0% { opacity: 0; transform: translate3d(-30px, 0, 0px); }
     100% { opacity: 1; transform: translate3d(0px, 0px, 0px); }
 }
+@keyframes opacity {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* sec2 */
+section.sec2 .wrap .box1 .t1 { opacity: 0; }
+section.sec2 .wrap.on .box1 .t1 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+
+section.sec2 .wrap .box2 .titleDiv .t1 { opacity: 0; }
+section.sec2 .wrap.on .box2 .titleDiv .t1 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; animation-delay: 0.2s; }
+section.sec2 .wrap .box2 .titleDiv .t2 { opacity: 0; }
+section.sec2 .wrap.on .box2 .titleDiv .t2 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; animation-delay: 0.4s; }
+
+section.sec2 .slideBox { opacity: 0; }
+section.sec2 .slideBox.on { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+
+/* sec3 */
+section.sec3 .arti_1 .t1 { opacity: 0; }
+section.sec3 .arti_1.on .t1 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec3 .arti_1 .t2 { opacity: 0; }
+section.sec3 .arti_1.on .t2 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; animation-delay: 0.2s; }
+section.sec3 .arti_2 .t1 { opacity: 0; }
+section.sec3 .arti_2.on .t1 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec3 .arti_2 .t2 { opacity: 0; }
+section.sec3 .arti_2.on .t2 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; animation-delay: 0.2s; }
+section.sec3 .arti_3 .t1 { opacity: 0; }
+section.sec3 .arti_3.on .t1 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec3 .arti_3 .t2 { opacity: 0; }
+section.sec3 .arti_3.on .t2 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; animation-delay: 0.2s; }
+
+/* sec4 */
+section.sec4 .box1 { opacity: 0; }
+section.sec4.on .box1 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec4 .box2 { animation: float 2s ease-in-out infinite; }
+/* section.sec4.on .box2 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; animation-delay: 0.2s; } */
+
+section.sec4 .box3 .menuDiv { opacity: 0; }
+section.sec4 .box3.on .menuDiv { animation: opacity 1s ease forwards; }
+
+section.sec4 .box4 { opacity: 0; }
+section.sec4 .box4.on { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+
+/* sec5 */
+section.sec5 .sec5_div .t1 { opacity: 0; }
+section.sec5 .sec5_div.on .t1 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec5 .sec5_div .t2 { opacity: 0; }
+section.sec5 .sec5_div.on .t2 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; animation-delay: 0.1s; }
+section.sec5 .sec5_div .t3 { opacity: 0; }
+section.sec5 .sec5_div.on .t3 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; animation-delay: 0.2s; }
+
+section.sec5 ul li:nth-child(1) { opacity: 0; }
+section.sec5 ul.on li:nth-child(1) { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec5 ul li:nth-child(2) { opacity: 0; }
+section.sec5 ul.on li:nth-child(2) { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; animation-delay: 0.2s; }
+section.sec5 ul li:nth-child(3) { opacity: 0; }
+section.sec5 ul.on li:nth-child(3) { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; animation-delay: 0.4s; }
+
+/* sec6 */
+section.sec6 .sec6_div .t1 { opacity: 0; }
+section.sec6 .sec6_div.on .t1 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec6 .sec6_div .t2 { opacity: 0; }
+section.sec6 .sec6_div.on .t2 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; animation-delay: 0.1s;}
+
+/* sec7 */
+section.sec7 .t1 { opacity: 0; }
+section.sec7.on .t1 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec7 .t2 { opacity: 0; }
+section.sec7.on .t2 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; animation-delay: 0.2s;}
+section.sec7 .t3 { opacity: 0; }
+section.sec7.on .t3 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; animation-delay: 0.3s;}
+
+section.sec7 ul li.list1 { opacity: 0; }
+section.sec7 ul.on li.list1 { animation: opacity 3s ease forwards; }
+section.sec7 ul li.list2 { opacity: 0; }
+section.sec7 ul.on li.list2 { animation: opacity 3s ease forwards; }
+
+section.sec7 .t4 { opacity: 0; }
+section.sec7 .t4.on { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+
+/* sec9 */
+section.sec9 .textBox .t1 { opacity: 0; }
+section.sec9.on .textBox .t1 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec9 .textBox .t2 { opacity: 0; }
+section.sec9.on .textBox .t2 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; animation-delay: 0.1s; }
+
+section.sec9 .sec9_div { opacity: 0; }
+section.sec9 .sec9_div.on { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec9 .t4 { opacity: 0; }
+section.sec9 .t4.on { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec9 .sec9_btn { opacity: 0; }
+section.sec9 .sec9_btn.on { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+
+
+

@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function(e){
     sec1_swiper();
     sec2_swiper();
     sec4_swiper1();
-    // sec4_swiper2();
+    sec4_swiper2();
+    sec4_swiper3();
     sec4_Menu();
     countWrap();
     sec8_swiper();
@@ -48,24 +49,49 @@ const sec2_swiper = () => {
 const sec4_swiper1 = () => {
         var swiper = new Swiper(".sec4_Swiper1", {
         loop: true,
+        slidesPerView: 1,
+        centeredSlides: true,
+        observer: true,
+        observeParents: true,
         navigation: {
             nextEl: ".sec4_next",
             prevEl: ".sec4_prev",
         },
         pagination: {
-            el: ".swiper-pagination",
+            el: ".sec4_pagination1",
         },
     });
 }
+
 const sec4_swiper2 = () => {
         var swiper = new Swiper(".sec4_Swiper2", {
         loop: true,
+        slidesPerView: 1,
+        centeredSlides: true,
+        observer: true,
+        observeParents: true,
         navigation: {
-            nextEl: ".sec4_prev2",
+            nextEl: ".sec4_next2",
             prevEl: ".sec4_prev2",
         },
         pagination: {
-            el: ".swiper-pagination",
+            el: ".sec4_pagination2",
+        },
+    });
+}
+const sec4_swiper3 = () => {
+        var swiper = new Swiper(".sec4_Swiper3", {
+        loop: true,
+        slidesPerView: 1,
+        centeredSlides: true,
+        observer: true,
+        observeParents: true,
+        navigation: {
+            nextEl: ".sec4_next3",
+            prevEl: ".sec4_prev3",
+        },
+        pagination: {
+            el: ".sec4_pagination3",
         },
     });
 }
@@ -82,24 +108,36 @@ const sec4_Menu = () => {
 }
 
 const countWrap = () => {
-    $('.counting').each(function() {
-        var $this = $(this),
-            countTo = $this.attr('data-count');
+        const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                startCounting($(entry.target)); 
+                observer.unobserve(entry.target); // 한 번만 실행
+            }
+        });
+    }, { threshold: 0.3 }); // 30% 보이면 실행
 
-        $({ countNum: $this.text() }).animate(
+    $('.counting').each(function() {
+        observer.observe(this);
+    });
+
+    function startCounting($elem) {
+        var countTo = $elem.attr('data-count');
+
+        $({ countNum: $elem.text() }).animate(
             { countNum: countTo },
             {
                 duration: 1000,
                 easing: 'linear',
                 step: function() {
-                    $this.text(Math.floor(this.countNum).toLocaleString());
+                    $elem.text(Math.floor(this.countNum).toLocaleString());
                 },
                 complete: function() {
-                    $this.text(Number(this.countNum).toLocaleString());
+                    $elem.text(Number(this.countNum).toLocaleString());
                 }
             }
         );
-    });
+    }
 
     
 }
